@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Popcornd | Settings</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
+  <script src='assets/script.js' defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id='movieModal'>
+    <div id='movieDeepDive'>
+      <div id ='closeModal'>✖</div>
+      <div id='movieBanner'></div>
+      <div id='movieAdvancedInformation'>
+        <img src=''>
+        <p></p>
+      </div>
+      <div id='movieReview'>
+        <form id='newReview' method='POST' action ='/newReviewGallery'>
+          <div id='hiddenInputs' style='display:none;'>
+            <input type='text' name='movie' id='movie'>
+            <input type='text' name='userOpinion' id='userOpinion'>
+          </div>
+          <textarea placeholder="What do you think of this movie?" name='userReview'></textarea>
+          <div id='otherActions'>
+            <div id='likeMovie'>
+              Did you like this movie?&nbsp;&nbsp;&nbsp;
+              <button id='nah' type='button' class='opinionChoice'>Nah</button><button class='opinionChoice userOpinion' id='meh' type='button'>Meh</button><button id='yea' type='button' class='opinionChoice'>Yea</button>
+            </div>
+            <div>
+              <input type='submit' id='deleteEntry' name='deleteEntry' value='Delete Entry'>
+              <input type="submit" id='addEntry' name='addEntry' value='Add Entry'>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav>
+      <a href='../'><img id='logoBanner' src='assets/popcorndBanner_s.svg'></a>
+      <div id='navActions'>
+        <a href='../'><button id='goBack'>Go Back</button></a>
+        <img id='userPhoto' src='http://popcornd.tech/sitewide/defaultAvatars/defaultDog.jpg'>
+      </div>
+      <div id='acts'>
+        <a href='../settings'>My settings</a>
+        <button id='logOut'>Log Out</button>
+      </div>
+    </nav>
+  </header>
+  <div id='profileViews'>
+    <div id='profileNavs'>
+      <button class='profileNav activeNav' id='myReviewsNav'>My Reviews</button>
+      <button class='profileNav' id='myLists'>My Lists</button>
+    </div>
+    <div id='myReviews'>
+      <p>You don't have any reviews yet.&nbsp;<a href='../'>Add one now!</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+#logo {
+  width: 15rem;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+  transition: width .5s ease;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+}
+
+body{
+  background-image: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0) 25%, rgba(25,25,25,0) 75%, rgba(25,25,25,1) 100%), url('bg.png');
+  background-size: cover;
+  /* background-image: url('../../assets/bodyTexture.png'); */
+  background-color: #1e1e1e;
+  min-height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  min-height:100vh;
+}
+
+button{
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 80%;
+  padding: .5rem;
+  border: none;
+  border-radius: 8px;
+  transition: width .55s ease;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+#logIn{
+  background-color: #D82E2E;
+  color: #1e1e1e;
+}
+
+#signUp{
+  transition: all .55s ease;
+  background: none;
+  border: 2px solid #D82E2E;
+  color: #D82E2E
+}
+
+#authSelect{
+  width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+input{
+  font-size: 1rem;
+  width: 15rem;
+  text-align: left;
+  border-radius: 8px;
+  font-weight: 300;
+  padding: .75rem;
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #fcecb3;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #fcecb3;
+}
+
+label {
+  font-weight: 300;
+  color: #fcecb3;
+  display: block;
+  text-align: left;
+  padding-left:.75rem;
+}
+
+#existing, #new {
+  transition: all .55s ease;
+  transform: scale(0);
+  opacity: 0;
+  max-height: 0;
+}
+
+.action {
+  display: flex;
+  margin-bottom: .5rem;
+}
+.action > span {
+  display: inline-block;
+  font-weight: 300;
+  color: #D82E2E;
+  font-size: 1.5rem;
+}
+
+.action > span:last-child {
+  flex-grow: 2;
+}
+
+.closeAuth {
+  cursor: pointer;
+}
+
+input[type=submit]{
+  display: none;
+}
+
+#infoFlash{
+  width: 100%;
+  position: absolute;
+  top: 2rem;
+  z-index: 5;
+  display: none;
+}
+
+#infoFlash>span{
+  cursor: default;
+  border-radius: 8px;
+  font-weight: 300;
+  padding: .5rem 1rem;
+  background-color: #191919;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+}
+
+.animateNow{
+  opacity: 0;
+  animation: fadeOut 4s ease;
+}
+
+.animateNow:hover{
+  opacity: 1;
+  animation: initial;
+}
+
+@keyframes stay{}
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  85%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

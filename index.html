@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Popcornd | Your Movie Diary</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
+  <link rel='shortcut icon' href='assets/popcornd.svg' type='image/x-icon'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id='movieModal'>
+    <div id='movieDeepDive'>
+      <div id ='closeModal'>✖</div>
+      <div id='movieBanner'></div>
+      <div id='movieAdvancedInformation'>
+        <img src=''>
+        <p></p>
+      </div>
+      <div id='movieReview'>
+        <form id='newReview' method='POST' action ='/newReview'>
+          <div id='hiddenInputs' style='display:none;'>
+            <input type='text' name='movie' id='movie'>
+            <input type='text' name='userOpinion' id='userOpinion'>
+          </div>
+          <textarea placeholder="What do you think of this movie?" name='userReview'></textarea>
+          <div id='otherActions'>
+            <div id='likeMovie'>
+              Did you like this movie?&nbsp;&nbsp;&nbsp;
+              <button id='nah' type='button' class='opinionChoice'>Nah</button><button class='opinionChoice userOpinion' id='meh' type='button'>Meh</button><button id='yea' type='button' class='opinionChoice'>Yea</button>
+            </div>
+            <div>
+              <input type='submit' id='deleteEntry' name='deleteEntry' value='Delete Entry'>
+              <input type="submit" id='addEntry' name='addEntry' value='Add Entry'>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav>
+      <a href='../'><img id='logoBanner' src='assets/popcorndBanner_s.svg'></a>
+      <div id='navActions'>
+        <button id='newEntry'>New Entry</button>
+        <img id='userPhoto' src='http://popcornd.tech/sitewide/defaultAvatars/defaultDog.jpg'>
+      </div>
+      <div id='acts'>
+        <a href='profile/'>My profile</a>
+        <a href='settings/'>My settings</a>
+        <button id='logOut'>Log Out</button>
+      </div>
+    </nav>
+  </header>
+  <div id='recentReviews'>
+    <br><br><p>You haven't added any entries to your diary yet!<br>Search for a movie below.</p><br><br>
+  </div>
+  <form id='searchAction'>
+    <div id='searchBox'>
+      <input type='text' id='searchQuery' name='searchQuery' autocomplete="off" placeholder="What was the movie's title?" required>
+      <select name="year" id="year">
+        <option value="" selected>Year</option>
+      </select>
+      <input type='submit' name='search' id='search' value='🔍'>
+    </div>
+    <span id='searchTip'>Try to be specific with the title. The release year is optional.</span><br>
+  </form>
+  <div id='searchResults'>
+  </div>
+  <p id='failSearch'>Can't see the movie here? We might not have it just yet.<br>You can try again using a more specific search term.<br><br></p>
+  <script src='assets/script.js'></script>
+  <script src='assets/dropdownYears.js'></script>
+</body>
+</html>

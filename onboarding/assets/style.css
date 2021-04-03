@@ -1,0 +1,136 @@
+#logo {
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+  transition: width .5s ease;
+  border-radius: 8px;
+}
+
+* {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+}
+
+body{
+  background-image: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0) 25%, rgba(25,25,25,0) 75%, rgba(25,25,25,1) 100%), url('../../welcome/assets/bg.png');
+  background-size: cover;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-height:100vh;
+}
+
+h1{
+  color: #fcecb3;
+  margin-bottom: 1rem;
+}
+
+.content{
+  width: clamp(200px, 50%, 400px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transition: .5s all ease;
+}
+
+p{
+  font-size: 1.25rem;
+  color: #fcecb3;
+  font-weight: 300;
+}
+
+button{
+  margin: auto;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  color: #fcecb3;
+  background-color: #d82e2e;
+  width: 80%;
+}
+
+span {
+  color: #d82e2e;
+}
+
+#two, #three, #four{
+  display: none;
+  opacity: 0;
+  transform: translateX(25vw);
+}
+
+button:focus{
+  outline: none;
+}
+
+.avatars{
+  margin-top: 1rem;
+  width: 35%;
+  border-radius: 50%;
+  border: 5px solid #1e1e1e;
+  cursor: pointer;
+}
+
+#selectedAvatar{
+  border: 5px solid #d82e2e;
+}
+
+#avatarChoice{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+ol{
+  list-style-type: decimal;
+  list-style-position: inside;
+  color: #fcecb3;
+  font-size: 1.25rem;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  margin: auto;
+  margin-top: 2rem;
+  width: 50px;
+  height: 50px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  margin: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid #fcecb3;
+  border-color: #fcecb3 transparent #fcecb3 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
